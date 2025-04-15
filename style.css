@@ -423,6 +423,12 @@ form button {
   #caso-sucesso .wrapper div:nth-child(1) {
     width: 100%; 
   } 
+  header img {
+    width: 100px;
+  }
+  main {
+    margin-top: 96px;
+  }
 }
 
 @media screen and (max-width: 480px) {
