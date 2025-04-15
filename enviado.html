@@ -9,6 +9,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script>
+      if (localStorage.getItem('formEnviado') !== 'true') {
+        window.location.href = '/';
+      } else {
+        localStorage.removeItem('formEnviado');
+
+        document.addEventListener("DOMContentLoaded", function () {
+          document.body.style.display = 'block';
+        });
+      }
+    </script>
+    <style>
+      body {
+        display: none;
+      }
+    </style>
   </head>
   <body>
     <div class="emailSent">
@@ -21,12 +37,5 @@
         <a href="/">Voltar para a página inicial</a>
       </div>
     </div>
-    <script>
-      if (localStorage.getItem('formEnviado') === 'true') {
-        localStorage.removeItem('formEnviado');
-      } else {
-        window.location.href = '/';
-      }
-    </script>
   </body>
 </html>
