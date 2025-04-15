@@ -25,3 +25,9 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
     }
   });
 });
+
+const form = document.getElementById('formulario');
+form.addEventListener('submit', () => {
+  localStorage.setItem('formEnviado', 'true');
+});
+
